@@ -30,6 +30,11 @@ createApp({
                 ]
             }
         }
+        // methods() {
+
+        // }
     }).mount('.carosello')
 // per prima cosa generiamo i vari div che contengono le slide 
+// ADESSO CHE ABBIAMO GENERATO LE SLIDE DOBBIAMO COLLEGARE LE CLASSI ACTIVE E NON 
+
 
