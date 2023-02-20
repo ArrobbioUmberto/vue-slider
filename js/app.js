@@ -27,7 +27,10 @@ createApp({
                     title: "Marvel's Avengers",
                     text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
                 }
-            ]
+            ],
+            currentIndex: 0,
+            intervallo: 3000,
+            intervalloAutoPlay:null
         }
     },
     methods: {
@@ -44,8 +47,14 @@ createApp({
             } else {
                 this.currentIndex++
             }
+        },
+        play: function() {
+            this.intervalloAutoPlay = setInterval(this.nextImage, this.intervallo);
         }
-    }
+    },
+    mounted() {
+        this.play();
+    },
 }).mount('.carosello')
 // per prima cosa generiamo i vari div che contengono le slide 
 // ADESSO CHE ABBIAMO GENERATO LE SLIDE DOBBIAMO COLLEGARE LE CLASSI ACTIVE E NON 
