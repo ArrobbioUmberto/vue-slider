@@ -18,16 +18,14 @@
     <div class="container py-5">
         <div class="row">
             <div class="carosello">
-                <div v-for="(slides,index) in slides">
-                    <!-- if(currentindex === indiceSlideAttiva)? metti active: metti none -->
+                <div v-for="(slides,index) in slides":class="{ active: index === currentIndex }" class="slide">
                     <img :style="` width: 100%; object-fit: cover; object-position: center;aspect-ratio: 16/9; `" :src="slides.image" alt="immagine">
                     <div class="description">
-                        <h1>{{slides.title}}</h1>
-                        <p>{{slides.text}}</p>
+                        <h1 class="title">{{slides.title}}</h1>
+                        <p class="text">{{slides.text}}</p>
                     </div>
-                    
                 </div>
-                <div id="arrow-left" class="carousel__arrow arrow-left "@click="previousImage">
+                <div id="arrow-left" class="carousel__arrow arrow-left " @click="previousImage">
                     <i class="fa-solid fa-chevron-left" ></i>
                 </div>
                 <div id="arrow-right" class="carousel__arrow arrow-right" @click="nextImage">
@@ -35,7 +33,7 @@
                 </div>
             </div>
             <div class="d-flex flex m-2 justify-content-center">
-                <i id="play" class="fa-solid fa-play p-2 m-2 "></i>
+                <i id="play" class="fa-solid fa-play p-2 m-2 " @click="play" ></i>
                 <i id="stop" class="fa-solid fa-stop p-2 m-2"></i>
                 <i id="reverse" class="fa-solid fa-repeat p-2 m-2"></i>
             </div>
