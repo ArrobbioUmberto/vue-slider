@@ -3,18 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 } 
-.slide img{
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    aspect-ratio: 16/9;  
-}
-.slide{
+/* .slide{
     display: none;
-}
-.slide.active {
+} */
+/* .slide.active {
     display: block;
-}
+} */
 .carosello{
     position: relative;
     padding: 0;
@@ -34,7 +28,7 @@
 .carosello .carousel__arrow.arrow-right {
 	right: 20px;
 }
-.description{
+/* .description{
     position: absolute;
     bottom: 0;
     left: 0;
@@ -46,8 +40,8 @@
     align-items:flex-end;
     text-align: end;
     padding: 10px;
-}
-.title{
+} */
+/* .title{
     color: white;
     font-size: 2rem;
 }
@@ -58,4 +52,4 @@
 .d-flex>i{
     font-size: 30px;
     color: cornflowerblue;  
-}
+} */
